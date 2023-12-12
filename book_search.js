@@ -205,7 +205,7 @@ const inputObject1Monkeys = {
     ]
 }
 
-// Input object 2
+// Input Object 2
 const inputObject2 = [
     {
         "Title": "My Book Title2",
@@ -214,22 +214,22 @@ const inputObject2 = [
     }
 ]
 
-// output objects for Input object 2 
+// Output objects for inputObject2 tests
 const inputObject2Nonexistent = {
     "SearchTerm": "nonexistent",
     "Results": []
 }
 
-// Input object 3
+// Input Object 3
 const inputObject3 = []
 
-// output objects for Input object 3 
+// Output objects for inputObject3 test
 const inputObject3None = {
     "SearchTerm": "none",
     "Results": []
 }
 
-// Input object 4
+// Input Object 4
 const inputObject4 = [
     {
         "Title": "My Book Title4",
@@ -276,7 +276,7 @@ const inputObject4 = [
     }
 ]
 
-// output objects for Input object 4
+// Output objects for inputObject4 tests
 const inputObject4Citrus = {
     "SearchTerm": "citrus",
     "Results": [
@@ -403,7 +403,6 @@ if (testNegLen.Results.length === 0) {
     console.log("Received:", testNegLen.Results.length);
 }
 
-/* letters */
 // words inside words
 const testMother = findSearchTermInBooks("mother", inputObject1);
 if (JSON.stringify(inputObject1Mother) === JSON.stringify(testMother)) {
@@ -414,7 +413,6 @@ if (JSON.stringify(inputObject1Mother) === JSON.stringify(testMother)) {
     console.log("Received:", testMother);
 }
 
-/* non-letter */
 // dashed word
 const testCheckIn = findSearchTermInBooks("check-in", inputObject1);
 if (JSON.stringify(inputObject1CheckIn) === JSON.stringify(testCheckIn)) {
@@ -477,7 +475,7 @@ if (JSON.stringify(inputObject2Nonexistent) === JSON.stringify(testNonexistent))
     console.log("Received:", testNonexistent);
 }
 
-// more than 1 book object search result in both 
+// more than 1 book object, search result in both objects
 const testCitrus = findSearchTermInBooks("citrus", inputObject4);
 if (JSON.stringify(inputObject4Citrus) === JSON.stringify(testCitrus)) {
     console.log("PASS: Test 4 Citrus");
@@ -487,7 +485,7 @@ if (JSON.stringify(inputObject4Citrus) === JSON.stringify(testCitrus)) {
     console.log("Received:", testCitrus);
 }
 
-// same word in the same line 
+// same search term in the same line 
 const testJam = findSearchTermInBooks("jam", inputObject4);
 if (JSON.stringify(inputObject4Jam) === JSON.stringify(testJam)) {
     console.log("PASS: Test 4 Jam");
